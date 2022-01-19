@@ -1,11 +1,13 @@
 <?php
 
 use Koraycicekciogullari\HydroAdministrator\Controllers\AdministratorController;
+use Koraycicekciogullari\HydroAdministrator\Controllers\LoginController;
 use Koraycicekciogullari\HydroAdministrator\Controllers\LogoutController;
 use Koraycicekciogullari\HydroAdministrator\Controllers\PasswordController;
 use Koraycicekciogullari\HydroAdministrator\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::post('login', LoginController::class);
 
 Route::middleware('auth:sanctum')->post('api/logout', LogoutController::class);
 
