@@ -27,10 +27,9 @@ class AdministratorCreated extends Notification
     public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('E-Posta Adresiniz: ' . $this->email)
-                    ->line('Geçici Parola: ' . $this->password)
-                    ->action('Yönetim Paneli', 'https://kuponcam.com/admin')
-                    ->line('Lütfen Yönetim Paneli Girişi Sonrası Parolanızı değiştirin!');
+            ->line('E-Posta Adresiniz: ' . $this->email)
+            ->line('Geçici Parola: ' . $this->password)
+            ->line('Lütfen Yönetim Paneli Girişi Sonrası Parolanızı değiştirin!');
     }
 
     public function toArray($notifiable): array
